@@ -1,71 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <!-- SEO Meta Tags -->
-        <meta name="description" content="Your description">
-        <meta name="author" content="Pratham">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <?php 
+  date_default_timezone_set("Asia/Manila");
+  
+  ob_start();
+  $title = isset($_GET['page']) ? ucwords(str_replace("_", ' ', $_GET['page'])) : "Home";
+  ?>
+  <title><?php echo $title ?> | <?php echo $_SESSION['system']['name'] ?></title>
+  <?php ob_end_flush() ?>
 
-        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-        <meta property="og:site_name" content="" /> <!-- website name -->
-        <meta property="og:site" content="" /> <!-- website link -->
-        <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-        <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-        <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-        <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
-
-        <!-- Webpage Title -->
-        <title>Workio </title>
-        
-        <!-- Styles -->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/fontawesome-all.min.css" rel="stylesheet">
-        <link href="css/swiper.css" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet">
-        
-        <!-- Favicon  -->
-        <link rel="icon" href="images/favicon.png">
-    </head>
-    <body data-bs-spy="scroll" data-bs-target="#navbarExample">
-        
-        <!-- Navigation -->
-        <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
-            <div class="container">
-
-                <!-- Image Logo 
-                <a class="navbar-brand logo-image" href="index.php"><img src="images/logo.svg" alt="alternative"></a> 
-
-                <!-- Text Logo - Use this if you don't have a graphic logo -->
-                <!-- <a class="navbar-brand logo-text" href="index.html">Ioniq</a> -->
-
-                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                    <ul class="navbar-nav ms-auto navbar-nav-scroll">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#features">Features</a>
-                        </li>
-                        
-                    </ul>
-                   
-
-                    <span class="nav-item">
-                        <a class="btn-outline-sm" href="dashboard/login.php">Log in</a>
-                    </span>
-
-                </div> <!-- end of navbar-collapse -->
-            </div> <!-- end of container -->
-        </nav> <!-- end of navbar -->
-        <!-- end of navigation -->
-
-    
-        
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- DataTables -->
+  <link rel="stylesheet" href="assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+   <!-- Select2 -->
+  <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+   <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="assets/plugins/toastr/toastr.min.css">
+  <!-- dropzonejs -->
+  <link rel="stylesheet" href="assets/plugins/dropzone/min/dropzone.min.css">
+  <!-- DateTimePicker -->
+  <link rel="stylesheet" href="assets/dist/css/jquery.datetimepicker.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Switch Toggle -->
+  <link rel="stylesheet" href="assets/plugins/bootstrap4-toggle/css/bootstrap4-toggle.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="assets/dist/css/styles.css?version=1">
+	<script src="assets/plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+ <!-- summernote -->
+  <link rel="stylesheet" href="assets/plugins/summernote/summernote-bs4.min.css">
+  
+</head>
